@@ -1,0 +1,9 @@
+.idea
+*.pyc
+*.pyo
+*.db
+.DS_Store
+.coverage
+local_settings.py #optional
+#/static #optional, need to set up CDN for Heroku
+/venv

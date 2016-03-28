@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html>
+    <head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <!-- Bootstrap Core CSS -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/select2/3.5.0/select2.min.css"></link>
+
+
+{#            <link href="{% static 'css/bootstrap-theme.css.map' %}" rel="stylesheet">#}
+
+{#    <link href="{% static 'css/css' %}" rel="stylesheet">#}
+    <link href="{% static 'css/tipsy.css' %}" rel="stylesheet">
+                <link href="{% static 'css/getorgchart.css' %}" rel="stylesheet">
+
+</head>
+    <body>
+    {% block content %}
+
+<style scoped>
+.node {
+  cursor: pointer;
+}
+.node circle {
+  fill: #fff;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
+div.tooltip {
+    position: absolute; /*very important*/
+    text-align: left;
+    padding: 5px 10px 5px 10px;
+    font: bold 11px sans-serif;
+    color: black;
+    background: yellow;
+    border-radius: 8px;
+    pointer-events: none;
+}
+.node text {
+  font: 10px sans-serif;
+}
+.link {
+  fill: none;
+  stroke: #ccc;
+  stroke-width: 1.5px;
+}
+{#.container{#}
+{#    background-image: url(../static/img/blue-wallpaper-background-texture-checkbox-1024x640.jpg);#}
+{#    background-size: 100% 100%;#}
+{#}#}
+#chart{
+
+background-image: url(../static/img/blue-wallpaper-background-texture-checkbox-1024x640.jpg);
+    background-size: 100% 100%;
+}
+{#rect title{#}
+{#    background-color: dodgerblue;#}
+{#    color: black;#}
+{#    min-width: 50px;#}
+{#    min-height: 50px;#}
+{##}
+.node {
+  cursor: pointer;
+}
+
+.node circle {
+  fill: #fff;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
+
+.node text {
+  font: 10px sans-serif;
+}
+
+.link {
+  fill: none;
+  stroke: #ccc;
+  stroke-width: 1.5px;
+}
+
+.found {
+  fill: #004dff;
+  stroke: #004dff;
+}
+
+.search {
+  float: left;
+  font: 10px sans-serif;
+  width: 30%;
+}
+
+ul.select2-results {
+ max-height: 100px;
+}
+
+.select2-container,
+.select2-drop,
+.select2-search,
+.select2-search input {
+  font: 10px sans-serif;
+}
+.name {
+  font-weight: bolder;
+    font-size: larger;
+}
+
+.about {
+  fill: black;
+  font-size: smaller;
+}
+#block_container {
+  display: inline;
+}
+</style>
+{#<div class="container">#}
+{#<div class="row">#}
+{#    <div class="column-md-8 column-md-offset-2 holder">#}
+        <div id="block_container">
+   <div id="searchName"></div>
+</div>
+        <div id="chart"></div>
+
+    </div>
+</div>
+</div>
+
+{#<script src="//d3js.org/d3.v3.min.js"></script>#}
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/select2/3.5.0/select2.min.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.min.js"></script>
+{#                <script src="{% static 'js/jquery.js' %}"></script>#}
+{##}
+{#        <script src="{% static 'js/bootstrap.min.js' %}"></script>#}
+{#        <script src="{% static 'js/org_chart_box.js' %}"></script>#}
+{#        <script src="{% static 'js/tipsy.js' %}"></script>#}
+                <script src="{% static 'js/org_chart_box.js' %}"></script>
+{#                <script src="{% static 'js/org_chart_search.js' %}"></script>#}
+
+{#        <script src="{% static 'js/org_chart_box.js' %}"></script>#}
+
+
+
+    {% endblock content %}
+    </body>
+</html>
